@@ -1,7 +1,9 @@
 # bloginreact
+
 For learning of react in simple way
 
 # Pre-requisites
+
 1. install nodejs v 10.x
 
 2. sudo npm install -g create-react-app
@@ -11,6 +13,7 @@ For learning of react in simple way
 4. cd example2
 
 # Install Dependencies for this Project
+
 5. sudo npm install @material-ui/core
 
 6. sudo npm install axios
@@ -22,3 +25,8 @@ For learning of react in simple way
 9. sudo npm install --save react-router-dom
 
 10. sudo npm install --save sweetalert2
+
+
+# Run react
+
+npm start
