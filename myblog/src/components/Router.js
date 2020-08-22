@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-import {BrowserRouter, Route, Switch , Redirect} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -20,7 +20,7 @@ class Router extends Component {
     }
 
     getPost = () => {
-        axios.get('https://jsonplaceholder.typicode.com/posts')
+        axios.get(`https://jsonplaceholder.typicode.com/posts`)
              .then( res => {
                  this.setState({
                      posts: res.data
@@ -30,7 +30,7 @@ class Router extends Component {
 
     deletePost = (id) => {
         //console.log(id);
-        axios.delete('https://jsonplaceholder.typicode.com/posts/${id}')
+        axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then(res => {
             if (res.status === 200) {
                 const posts = [...this.state.posts];
@@ -45,7 +45,7 @@ class Router extends Component {
     }
 
     createPost = (post) => {
-        axios.post('https://jsonplaceholder.typicode.com/posts', {post})
+        axios.post(`https://jsonplaceholder.typicode.com/posts`, {post})
              .then(res => {
                  if (res.status === 201) {
                     Swal.fire(
@@ -67,7 +67,7 @@ class Router extends Component {
     editPost = (postUpdate) => {
         const {id} = postUpdate;
 
-        axios.put('https://jsonplaceholder.typicode.com/posts/${id}', {postUpdate})
+        axios.put(`https://jsonplaceholder.typicode.com/posts/${id}`, {postUpdate})
              .then(res => {
                  if (res.status === 200) {
                     Swal.fire(
