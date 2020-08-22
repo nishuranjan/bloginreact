@@ -8,7 +8,7 @@ export default () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="headline" color="colorSecondary" noWrap>
-          Simple Blog Example
+          Nishant Blog
         </Typography>
       </Toolbar>
     </AppBar>
