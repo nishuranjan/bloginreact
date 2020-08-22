@@ -39,13 +39,13 @@ class Post extends Component {
             <Paper className="post">
             <p className="post_title" cols="10">
                 <b><span className='post-preview'>
-                    {title.length > 25 ? `${title.substr(0, 25)}...` : title}
+                    {title.length > 25 ? '${title.substr(0, 25)}...' : title}
                 </span></b>
             </p>
             <Divider light />
                 <p className="post_body">
                     <span className='post-preview'>
-                        {body.length > 300 ? `${body.substr(0, 300)}...` : body}
+                        {body.length > 300 ? '${body.substr(0, 300)}...' : body}
                     </span>
                 </p>
                 <Divider light />
@@ -54,8 +54,8 @@ class Post extends Component {
                 <p className="post_datestamp"><b>{moment(datestamp).fromNow()}</b></p>
                     <div className="post_button">
                         <ul className="buttons">
-                            <li><Link to={`/post/${id}`} className="btn btn-primary"> Show </Link></li>
-                            <li><Link to={`/edit/${id}`} className="btn btn-warning"> Edit </Link></li>
+                            <li><Link to={'/post/${id}'} className="btn btn-primary"> Show </Link></li>
+                            <li><Link to={'/edit/${id}'} className="btn btn-warning"> Edit </Link></li>
                             <li><Link onClick={this.confirmDeletion} className="btn btn-danger">Delete</Link></li>
                         </ul>
                     </div>
